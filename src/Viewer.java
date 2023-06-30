@@ -1,12 +1,14 @@
+import java.util.List;
+
 public class Viewer {
     private String name;
     private int age;
-    private int countOfFilmsWatched;
+    private List<Cinema> cinemas;
 
-    public Viewer(String name, int age, int countOfFilmsWatched) {
+    public Viewer(String name, int age, List<Cinema> cinemas) {
         this.name = name;
         this.age = age;
-        this.countOfFilmsWatched = countOfFilmsWatched;
+        this.cinemas = cinemas;
     }
 
     public String getName() {
@@ -26,11 +28,8 @@ public class Viewer {
     }
 
     public int getCountOfFilmsWatched() {
-        return countOfFilmsWatched;
+        return cinemas.size();
     }
 
-    public void setCountOfFilmsWatched(int countOfFilmsWatched) {
-        this.countOfFilmsWatched = countOfFilmsWatched;
-    }
 
 }
